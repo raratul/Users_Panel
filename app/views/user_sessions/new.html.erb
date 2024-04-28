@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Login page</h1>
+  
+    <%= form_with model: @user, url: user_sessions_path do |f| %>
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.text_field :email, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :password %>
+        <%= f.password_field :password, class: "form-control" %>
+      </div>
+  
+      <br>
+      <p class="text-center">
+        <%= f.submit 'Login', class: "btn btn-primary" %>
+      </p>
+  
+      <p class="text-center"> Don't have an account? </p>
+      <p class="text-center">
+        <%= link_to 'Sign Up', new_user_path %>
+      </p>
+    <% end %>
+</div>
+  

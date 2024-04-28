@@ -1,0 +1,71 @@
+<nav class="navbar navbar-light bg-light container">  
+  <a href=<%= users_path %> class="navbar-brand">
+    Users Panel
+  </a>
+  <span class="navbar-nav">
+    <h6>Welcome, <br> <%= current_user.name %></h6>
+    <%= link_to "Log Out", logout_path , method: "delete"%>
+  </span>
+</nav>
+
+<div class="container">
+  <div class="row mt-5 mb-2">  
+    <div class="col-md-12">  
+      <%= form_tag(users_block_path, method: :put, id: 'block_form') do %>
+      <%= button_tag(type: 'submit',  :name => 'block',class: "btn btn-warning action-buttonn",form: 'block_form' ) do %>
+      <i class="bi bi-lock-fill"></i> Block
+      <% end %>&nbsp;
+      <%= button_tag(type: 'submit',  :name => 'unblock',class: "btn btn-primary action-button", form: 'block_form' ) do %>
+      <i class="bi bi-unlock-fill"></i> Unblock
+      <% end %>&nbsp;
+      <%= button_tag(type: 'submit',  :name => 'remove',class: "btn btn-danger action-button", form: 'block_form' ) do %>
+      <i class="bi bi-trash-fill"></i> Delete
+      <% end %>
+    </div>
+  </div>
+
+  <hr>
+
+  <table class="table table-hover">  
+    <thead>
+      <tr>
+        <th><input type="checkbox" id="select_all"></th>
+        <th>Name</th>
+        <th>E-mail</th>
+        <th>Last login time</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= check_box_tag 'user_ids[]', user.id %></td>
+          <td><%= user.name %></td>
+          <td><%= user.email %></td>
+          <td><%= user.last_login %></td>
+          <td><%= user.status %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('select_all').addEventListener('change', function () {
+      var checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
+      checkboxes.forEach(function (checkbox) {
+        checkbox.checked = this.checked;
+      }, this);
+    });
+
+    document.querySelectorAll('.action-button').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var formId = this.dataset.formId;
+        document.getElementById(formId).submit();
+      });
+    });
+  });
+
+</script>
