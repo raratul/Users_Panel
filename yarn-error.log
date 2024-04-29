@@ -1,30 +1,30 @@
 Arguments: 
-  /usr/bin/node /mnt/c/Program Files (x86)/Yarn/bin/yarn.js add @hotwired/stimulus-loading
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add @hotwired/stimulus-loading
 
 PATH: 
-  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files (x86)/Yarn/bin/:/mnt/c/Program Files/PostgreSQL/16/bin:/mnt/c/Ruby32-x64/bin:/mnt/c/Users/DELL/AppData/Local/Microsoft/WindowsApps:/mnt/c/intelFPGA_lite/20.1/modelsim_ase/win32aloem:/mnt/c/Users/DELL/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/DELL/AppData/Roaming/npm:/mnt/c/Users/DELL/AppData/Local/Yarn/bin:/mnt/c/Program Files/sqlite:/snap/bin
+  C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\PostgreSQL\16\bin;C:\Ruby32-x64\bin;C:\Users\DELL\AppData\Local\Microsoft\WindowsApps;C:\intelFPGA_lite\20.1\modelsim_ase\win32aloem;C:\Users\DELL\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\DELL\AppData\Roaming\npm;C:\Users\DELL\AppData\Local\Yarn\bin;C:\Program Files\sqlite;
 
 Yarn version: 
   1.22.19
 
 Node version: 
-  12.22.9
+  20.12.2
 
 Platform: 
-  linux x64
+  win32 x64
 
 Trace: 
   Error: https://registry.yarnpkg.com/@hotwired%2fstimulus-loading: Not found
-      at Request.params.callback [as _callback] (/mnt/c/Program Files (x86)/Yarn/lib/cli.js:66145:18)
-      at Request.self.callback (/mnt/c/Program Files (x86)/Yarn/lib/cli.js:140890:22)
-      at Request.emit (events.js:314:20)
-      at Request.<anonymous> (/mnt/c/Program Files (x86)/Yarn/lib/cli.js:141862:10)
-      at Request.emit (events.js:314:20)
-      at IncomingMessage.<anonymous> (/mnt/c/Program Files (x86)/Yarn/lib/cli.js:141784:12)
-      at Object.onceWrapper (events.js:420:28)
-      at IncomingMessage.emit (events.js:326:22)
-      at endReadableNT (_stream_readable.js:1241:12)
-      at processTicksAndRejections (internal/process/task_queues.js:84:21)
+      at params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66145:18)
+      at self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140890:22)
+      at Request.emit (node:events:518:28)
+      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141862:10)
+      at Request.emit (node:events:518:28)
+      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141784:12)
+      at Object.onceWrapper (node:events:632:28)
+      at IncomingMessage.emit (node:events:530:35)
+      at endReadableNT (node:internal/streams/readable:1696:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
 
 npm manifest: 
   {
